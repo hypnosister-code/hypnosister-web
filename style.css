@@ -1,7 +1,7 @@
 /* Ogólne tło strony */
 body {
-    background-image: url('img/starwallpaper.jpg'); /* Ścieżka do pliku GIF */
-    background-size: cover;
+    background-image: url('gify/aquagalaxy_small.gif'); /* Ścieżka do pliku GIF */
+    background-size: 20%;
     background-position: center;
     background-attachment: fixed;
     color: rgb(255, 255, 255);
@@ -19,10 +19,9 @@ body {
 }
 
 .language-switcher img {
-    width: 30px;
-    height: 30px;
+    width: auto;
+    height: auto;
     margin: 0 5px;
-    transform: scale(2.5);
     cursor: pointer;
 
 }
@@ -146,8 +145,29 @@ body {
 .sidebar ul li a:hover {
     background-color: #575757;
 }
+.blinkies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.blinkie {
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
 
 .gif-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.borders {
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
