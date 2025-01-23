@@ -1,6 +1,6 @@
 /* Ogólne tło strony */
 body {
-    background-image: url('/img/starwallpaper.jpg'); /* Ścieżka do pliku GIF */
+    background-image: url('/img/starwallpaper.img); /* Ścieżka do pliku GIF */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
