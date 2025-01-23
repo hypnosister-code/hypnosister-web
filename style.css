@@ -1,0 +1,221 @@
+/* Ogólne tło strony */
+body {
+    background-image: url('/img/starwallpaper.jpg'); /* Ścieżka do pliku GIF */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+    font-family: 'modeseven';
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    transform: none;
+}
+.language-switcher {
+    position: relative;
+    bottom:auto;
+    top: 140px;
+    right: center;
+}
+
+.language-switcher img {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    transform: scale(2.5);
+    cursor: pointer;
+
+}
+
+
+.animecry {
+    position: relative;
+    left: 550px;
+    top: -790px;
+    height: auto;
+    margin: 0 auto;
+    transform: scale(1.5);
+    
+}
+
+.animegirl {
+    position: relative;
+    left: 690px;
+    bottom: auto;
+    top: -30px;
+    height: auto;
+    margin: 0 auto;
+    transform: scale(3.5);
+    
+}
+
+/* Pasek przewijania */
+.marquee {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: rgb(250, 243, 243);
+    font-family: 'modeseven', cursive;
+    font-size: 20px;
+    padding: 10px 0;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.marquee p {
+    white-space: nowrap;
+    margin: 0;
+    animation: marquee-animation 20s linear infinite;
+}
+
+@keyframes marquee-animation {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+/* Zielone napisy */
+.header-text {
+    display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    font-size: 48px;
+    text-shadow: 0px 0px 10px lime;
+}
+
+/* Zegar */
+.clock {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-family: 'modeseven';
+    font-size: 22px;
+    color: red;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    text-align: center;
+    z-index: 2000;
+}
+
+
+/* Pasek boczny */
+.sidebar {
+    width: 150px;
+    background-color:transparent;
+   
+    color: white;
+    padding: 20px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    text-align: center;
+    color: #ffffff;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #575757;
+}
+
+.gif-links {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.gif-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.gif-link:hover {
+    transform: scale(1.2);
+}
+
+/* Kontener */
+.container {
+    position: relative;
+    margin-left: 350px;
+    margin-right: 350px;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    text-shadow: 0px 0px 10px rgb(255, 0, 0);
+    font-family: 'modeseven';
+    border: 3px double rgb(0, 174, 255);
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* Kafelki */
+.inner-border {
+    background-color: rgb(0, 0, 0);
+    border: 4px double rgb(255, 0, 0);
+    margin: 10px;
+    padding: 10px;
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+     font-family: 'modeseven';
+    text-align: justify; /* Wyrównanie tekstu do lewej i prawej */
+    line-height: 1.5; /* Ustawienie odstępu między liniami */
+}
+/* Stopka */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: 'modeseven', cursive;
+    font-size: 16px;
+    z-index: 1000;
+}
+
+/* Import czcionki */
+@font-face {
+    font-family: 'modeseven';
+    src: url('fonts/Modeseven-L3n5.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

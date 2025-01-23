@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria - Retro 90s Style</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border: 5px solid lime;
+            position: relative;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Pasek boczny -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="chwalenie.html">Chwalenie</a></li>
+        </ul>
+     
+    </div>
+
+    <!-- Główna zawartość -->
+    <div class="container">
+        <div class="main">
+            <h1>Galeria</h1>
+            <div class="gallery-container">
+                <!-- Wstawiaj tutaj zdjęcia -->
+                <div class="gallery-item">
+                    <img src="img/lain.jpg" alt="Zdjęcie 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="" alt="Zdjęcie 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="" alt="Zdjęcie 3">
+                </div>
+                <!-- Dodaj więcej zdjęć w taki sam sposób -->
+            </div>
+        </div>
+    </div>
+</body>
+</html>
