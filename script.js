@@ -1,22 +1,32 @@
+// Licznik odwiedzin
 document.addEventListener("DOMContentLoaded", () => {
     const counterElement = document.getElementById('counter');
-    
-    // Pobierz aktualną wartość licznika z localStorage
     let visitCount = localStorage.getItem('visitCount');
-
-    // Jeśli brak wartości, ustaw na 0
     if (visitCount === null) {
         visitCount = 0;
     } else {
         visitCount = parseInt(visitCount, 10);
     }
-
-    // Zwiększ licznik o 1
     visitCount += 1;
-
-    // Zaktualizuj licznik na stronie
     counterElement.textContent = visitCount;
-
-    // Zapisz nową wartość licznika w localStorage
     localStorage.setItem('visitCount', visitCount);
 });
+
+// Wykrywanie urządzenia mobilnego i przekierowanie
+function isMobile() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
+        || window.innerWidth <= 700;
+}
+
+function redirectToMobile() {
+    if (isMobile()) {
+        const currentPath = window.location.pathname;
+        if (!currentPath.includes('-mobile')) {
+            const mobilePath = currentPath.replace('.html', '-mobile.html');
+            window.location.href = mobilePath;
+        }
+    }
+}
+
+// Wywołaj przekierowanie gdy strona się załaduje
+window.addEventListener('load', redirectToMobile);

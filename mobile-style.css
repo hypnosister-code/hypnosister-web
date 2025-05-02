@@ -1,0 +1,146 @@
+/* Style dla wersji mobilnej */
+body {
+    background-image: url('gify/aquagalaxy_small.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+    font-family: 'modeseven';
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'modeseven';
+    src: url('fonts/Modeseven-L3n5.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container {
+    margin: 10px;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    text-shadow: 0px 0px 10px rgb(255, 0, 0);
+    font-family: 'modeseven';
+    border: 3px double rgb(0, 174, 255);
+}
+
+.header-text {
+    font-size: 24px;
+    text-shadow: 0px 0px 10px lime;
+    margin: 10px 0;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+    padding: 10px;
+}
+
+.mobile-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border: 1px solid rgb(0, 174, 255);
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.inner-border {
+    background-color: rgb(0, 0, 0);
+    border: 2px double rgb(255, 0, 0);
+    margin: 10px 0;
+    padding: 10px;
+    text-align: left;
+}
+
+.gif-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.gif-container img {
+    width: 40px;
+    height: 40px;
+}
+
+.blinkies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 5px;
+    margin: 15px 0;
+}
+
+.blinkie {
+    max-width: 100px;
+    height: auto;
+}
+
+.footer {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.clock {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 16px;
+    color: red;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.marquee {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 0;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.marquee p {
+    white-space: nowrap;
+    margin: 0;
+    animation: marquee-animation 20s linear infinite;
+}
+
+@keyframes marquee-animation {
+    from { transform: translateX(100%); }
+    to { transform: translateX(-100%); }
+}
+
+.language-switcher {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2001;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-switcher img {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.language-switcher img:hover {
+    transform: scale(1.1);
+}
