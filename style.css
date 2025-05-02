@@ -247,3 +247,11 @@ body {
     font-weight: normal;
     font-style: normal;
 }
+
+/* Import czcionek unix/neocities */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;700&family=VT323&display=swap');
+
+body, .container, .sidebar, .main, .blog-entry, .inner-border, .footer, .clock {
+    font-family: 'VT323', 'Fira Mono', 'IBM Plex Mono', 'modeseven', monospace !important;
+    letter-spacing: 0.5px;
+}
