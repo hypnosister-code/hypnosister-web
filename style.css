@@ -256,6 +256,35 @@ body, .container, .sidebar, .main, .blog-entry, .inner-border, .footer, .clock {
     letter-spacing: 0.5px;
 }
 
+/* Responsywność dla gifów i obrazków */
+img, .gif-link, .animecry img, .animegirl img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.animecry, .animegirl {
+    max-width: 100vw;
+    overflow-x: auto;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    margin: 0 auto !important;
+    position: static !important;
+}
+@media (max-width: 700px) {
+    .gif-link, .animecry img, .animegirl img {
+        width: 48px !important;
+        height: auto !important;
+        max-width: 80vw !important;
+    }
+    .animecry, .animegirl {
+        width: 100%;
+        max-width: 100vw;
+    }
+}
+
 @media (max-width: 700px) {
     body {
         background-size: 100%;
