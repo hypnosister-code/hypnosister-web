@@ -10,8 +10,6 @@ body {
     margin: 0;
     padding: 0;
     transform: none;
-    min-height: 100vh;
-    overflow-x: hidden;
 }
 .language-switcher {
     position: relative;
@@ -39,31 +37,23 @@ body {
 
 .divider-gif {
     display: block;
-    margin: 10px auto;
+    margin: 0 auto 10px auto;
     max-width: 100%;
     height: auto;
 }
 
 .animecry {
-    position: fixed;
-    right: 20px;
-    top: 150px;
-    width: 100px;
-    height: auto;
-    z-index: 1500;
-    transform: scale(1);
-    transition: transform 0.3s;
+    position: relative;
+    left: 550px;
+    top: -790px;
+    transform: scale(1.5);
 }
 
 .animegirl {
-    position: fixed;
-    right: 20px;
-    bottom: 150px;
-    width: 100px;
-    height: auto;
-    z-index: 1500;
-    transform: scale(1);
-    transition: transform 0.3s;
+    position: relative;
+    left: 690px;
+    top: -30px;
+    transform: scale(3.5);
 }
 
 /* Pasek przewijania */
@@ -195,35 +185,32 @@ body {
 }
 
 .gif-link {
-    max-width: 50px;
-    width: 100%;
-    height: auto;
+    width: 50px;
+    height: 50px;
     border-radius: 5px;
     transition: transform 0.3s;
 }
 
 .gif-link:hover {
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 /* Kontener bez żadnych media queries */
 .container {
     position: relative;
-    width: calc(100% - 500px);
-    margin-left: 200px;
-    margin-right: auto;
+    margin-left: 350px;
+    margin-right: 350px;
     padding: 20px;
     background-color: rgb(0, 0, 0);
     color: aliceblue;
     text-shadow: 0px 0px 10px rgb(255, 0, 0);
     font-family: 'modeseven';
     border: 3px double rgb(0, 174, 255);
-    min-height: calc(100vh - 100px);
+    height: calc(100vh - 100px);
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: space-between;
     box-sizing: border-box;
-    overflow-y: auto;
 }
 
 /* Kafelki */
@@ -281,15 +268,12 @@ body, .container, .sidebar, .main, .blog-entry, .inner-border, .footer, .clock {
         background-size: 100%;
     }
     .container {
-        width: calc(100% - 20px);
         margin: 10px;
+        width: calc(100% - 20px);
     }
     .sidebar {
         position: static;
         width: 100%;
-    }
-    .animecry, .animegirl {
-        display: none;
     }
 }
 
@@ -304,64 +288,4 @@ body, .container, .sidebar, .main, .blog-entry, .inner-border, .footer, .clock {
     width: 100%;
     box-sizing: border-box;
     word-wrap: break-word;
-}
-
-/* Responsywne breakpointy */
-@media (max-width: 1400px) {
-    .container {
-        width: calc(100% - 400px);
-        margin-left: 180px;
-    }
-    
-    .animecry {
-        width: 80px;
-    }
-    
-    .animegirl {
-        width: 80px;
-    }
-}
-
-@media (max-width: 1200px) {
-    .container {
-        width: calc(100% - 300px);
-        margin-left: 160px;
-    }
-    
-    .animecry {
-        width: 70px;
-    }
-    
-    .animegirl {
-        width: 70px;
-    }
-}
-
-@media (max-width: 900px) {
-    .container {
-        width: calc(100% - 200px);
-        margin-left: 140px;
-    }
-    
-    .sidebar {
-        width: 120px;
-    }
-    
-    .animecry {
-        width: 60px;
-        right: 10px;
-        top: 120px;
-    }
-    
-    .animegirl {
-        width: 60px;
-        right: 10px;
-        bottom: 120px;
-    }
-}
-
-/* Poprawki dla obrazów */
-img {
-    max-width: 100%;
-    height: auto;
 }

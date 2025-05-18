@@ -3,59 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Галерея</title>
     <link rel="stylesheet" href="mobile-style.css">
-    <style>
-        .gallery-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-        }
-
-        .gallery-item {
-            width: 90%;
-            max-width: 300px;
-            height: 300px;
-            overflow: hidden;
-            border: 5px solid lime;
-            position: relative;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
 </head>
 <body>
+    <div class="marquee">
+        <p>добро пожаловать в мою галерею</p>
+    </div>
+
+    <h1 class="header-text">Галерея</h1>
+    <img src="https://99gifshop.neocities.org/items/2/dragondivider.gif" alt="Dragon Divider" class="divider-gif">
+    
     <nav class="mobile-nav">
         <a href="index-ru-mobile.html">Главная</a>
         <a href="blog-ru-mobile.html">Блог</a>
         <a href="chwalenie-ru-mobile.html">Хвала</a>
+        <a href="galeria-mobile.html">EN</a>
     </nav>
 
     <div class="container">
-        <div class="main">
-            <h1>Gallery</h1>
-            <div class="gallery-container">
-                <div class="gallery-item">
-                    <img src="img/lain.jpg">
-                </div>
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="img/lain.jpg" alt="Lain">
+            </div>
+            <div class="gallery-item">
+                <img src="img/angel.jpeg" alt="Angel">
+            </div>
+            <div class="gallery-item">
+                <img src="img/images.jpeg" alt="Images">
             </div>
         </div>
 
-        <div class="blinkies-container">
-            <img src="gify/blinkiesCafe-Zk.gif" alt="Blinkie 1" class="blinkie">
-            <img src="gify/blinkiesCafe-wy.gif" alt="Blinkie 2" class="blinkie">
-            <img src="gify/blinkiesCafe-x6.gif" alt="Blinkie 3" class="blinkie">
+        <div class="gif-container">
+            <img src="gify/lain.gif" alt="Lain" class="gif-link">
+            <img src="gify/bambi.gif" alt="Bambi" class="gif-link">
+            <img src="gify/kirby.gif" alt="Kirby" class="gif-link">
         </div>
     </div>
 
+    <div class="visit-counter">
+        Посетители: <span id="counter">0</span>
+    </div>
+
+    <audio id="lain-bgm" src="muzyka/02.-Deeply.mp3" loop autoplay style="display:none"></audio>
+    <script>
+    const lainAudio = document.getElementById('lain-bgm');
+    lainAudio.volume = 0.2;
+    </script>
+
+    <div class="clock" id="clock"></div>
+    <script>
+        function updateClock() {
+            const clockElement = document.getElementById('clock');
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            clockElement.textContent = `${hours}:${minutes}`;
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+    </script>
+
     <footer class="footer">
-        <p>&copy; 2025 hypnosister. All rights reserved.</p>
+        <p>&copy; 2025 hypnosister. Все права защищены.</p>
+        <img src="gify/lain-iwakura.gif" alt="Blog" class="gif-link">
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

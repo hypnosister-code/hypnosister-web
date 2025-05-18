@@ -9,31 +9,7 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-}
-
-@font-face {
-    font-family: "Mode Seven";
-    src: url("fonts/Modeseven-L3n5.ttf") format("truetype");
-}
-
-.container {
-    margin: 10px;
-    padding: 20px;
-    background-color: rgb(0, 0, 0);
-    color: aliceblue;
-    text-shadow: 0px 0px 10px rgb(255, 0, 0);
-    font-family: 'modeseven';
-    border: 3px double rgb(0, 174, 255);
-    margin-bottom: 60px;
-}
-
-.header-text {
-    font-size: 32px;
-    text-shadow: 0px 0px 10px lime;
-    margin: 20px 0;
-    width: 100%;
-    box-sizing: border-box;
-    word-wrap: break-word;
+    min-height: 100vh;
 }
 
 .mobile-nav {
@@ -59,79 +35,12 @@ body {
     background-color: #575757;
 }
 
-.inner-border {
-    background-color: rgb(0, 0, 0);
-    border: 4px double rgb(255, 0, 0);
-    margin: 10px;
-    padding: 10px;
-    text-align: justify;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.gif-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-    margin: 15px 0;
-}
-
-.gif-container img {
-    width: 40px;
-    height: 40px;
-}
-
-.blinkies-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-    padding: 10px;
-    background-color: transparent;
-}
-
-.blinkie {
-    width: 100%;
-    height: auto;
-    max-width: 150px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: transparent;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    font-family: 'modeseven';
-    font-size: 16px;
-}
-
-.clock {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    font-family: 'modeseven';
-    font-size: 22px;
-    color: red;
-    padding: 10px;
-    background-color: rgba(0, 0, 0, 0.7);
-    text-align: center;
-}
-
 .marquee {
     background-color: transparent;
+    padding: 10px 0;
     color: rgb(250, 243, 243);
     font-family: 'modeseven';
     font-size: 20px;
-    padding: 10px 0;
     overflow: hidden;
 }
 
@@ -146,42 +55,88 @@ body {
     to { transform: translateX(-100%); }
 }
 
-.language-switcher {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 2001;
+.container {
+    margin: 10px;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    text-shadow: 0px 0px 10px rgb(255, 0, 0);
+    font-family: 'modeseven';
+    border: 3px double rgb(0, 174, 255);
+    min-height: calc(100vh - 200px);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
-.language-switcher img {
-    width: 40px;
-    height: 40px;
-    margin: 0;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: transform 0.3s;
-}
-
-.language-switcher img:hover {
-    transform: scale(1.1);
-}
-
-.blog-entry {
+.inner-border {
     background-color: rgb(0, 0, 0);
     border: 4px double rgb(255, 0, 0);
-    margin: 15px 0;
-    padding: 15px;
+    margin: 10px 0;
+    padding: 10px;
     text-align: justify;
+    line-height: 1.5;
+}
+
+.header-text {
+    font-size: 32px;
+    text-shadow: 0px 0px 10px lime;
+    margin: 20px 0;
+}
+
+.blinkies-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.blinkie {
+    max-width: 150px;
+    height: auto;
+}
+
+.gif-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.gif-link {
+    width: 40px;
+    height: 40px;
+}
+
+.clock {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 20px;
+    color: red;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
 }
 
 .visit-counter {
     text-align: center;
     margin: 20px 0;
-    font-size: 1.2em;
-    color: white;
 }
 
 /* Gallery specific styles */
@@ -213,7 +168,6 @@ body {
     font-style: normal;
 }
 
-/* Import unix/neocities fonts */
 @import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;700&family=IBM+Plex+Mono:wght@400;700&family=VT323&display=swap');
 
 body, .container, .main, .blog-entry, .inner-border, .footer, .clock {
