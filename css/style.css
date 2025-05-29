@@ -1,6 +1,6 @@
 /* Ogólne tło strony */
 body {
-    background-image: url('gify/aquagalaxy_small.gif'); /* Ścieżka do pliku GIF */
+    background-image: url('../images/aquagalaxy_small.gif'); /* Ścieżka do pliku GIF */
     background-size: 20%;
     background-position: center;
     background-attachment: fixed;
@@ -274,6 +274,82 @@ body, .container, .sidebar, .main, .blog-entry, .inner-border, .footer, .clock {
     .sidebar {
         position: static;
         width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0;
+    }
+    .sidebar ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+    }
+    .sidebar ul li {
+        margin: 0 10px;
+    }
+    .container {
+        margin: 10px;
+        width: calc(100% - 20px);
+        min-width: 0;
+        height: auto;
+        padding: 10px;
+    }
+    .footer {
+        font-size: 14px;
+        padding: 8px;
+    }
+    .clock {
+        font-size: 16px;
+        padding: 6px;
+        right: 5px;
+        bottom: 5px;
+    }
+    .header-text {
+        font-size: 28px;
+    }
+    .blinkies-container {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        gap: 5px;
+    }
+    .blinkie {
+        max-width: 90px;
+    }
+    .gif-link {
+        width: 32px;
+        height: 32px;
+    }
+    .animecry, .animegirl {
+        position: static;
+        left: unset;
+        top: unset;
+        transform: scale(1);
+        margin: 10px auto;
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .header-text {
+        font-size: 18px;
+    }
+    .container {
+        padding: 4px;
+    }
+    .sidebar ul li a {
+        font-size: 14px;
+        padding: 4px;
     }
 }
 
