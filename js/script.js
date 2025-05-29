@@ -12,21 +12,4 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.setItem('visitCount', visitCount);
 });
 
-// Wykrywanie urządzenia mobilnego i przekierowanie
-function isMobile() {
-    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) 
-        || window.innerWidth <= 700;
-}
-
-function redirectToMobile() {
-    if (isMobile()) {
-        const currentPath = window.location.pathname;
-        if (!currentPath.includes('-mobile')) {
-            const mobilePath = currentPath.replace('.html', '-mobile.html');
-            window.location.href = mobilePath;
-        }
-    }
-}
-
-// Wywołaj przekierowanie gdy strona się załaduje
-window.addEventListener('load', redirectToMobile);
+// Usunięto kod przekierowania mobilnego
