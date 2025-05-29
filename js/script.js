@@ -1,4 +1,4 @@
-// Licznik odwiedzin
+Escape// Licznik odwiedzin
 document.addEventListener("DOMContentLoaded", () => {
     const counterElement = document.getElementById('counter');
     let visitCount = localStorage.getItem('visitCount');

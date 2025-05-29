@@ -1,6 +1,6 @@
 /* Base styles */
 body {
-    background-image: url('gify/aquagalaxy_small.gif');
+    background-image: url('../images/aquagalaxy_small.gif');
     background-size: 100%;
     background-position: center;
     background-attachment: fixed;
