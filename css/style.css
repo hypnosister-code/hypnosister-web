@@ -1,6 +1,6 @@
 /* Ogólne tło strony */
 body {
-    background-image: url('../images/aquagalaxy_small.gif'); /* Ścieżka do pliku GIF */
+    background-image: url('/hypnosister-web/images/aquagalaxy_small.gif'); /* Ścieżka do pliku GIF */
     background-size: 20%;
     background-position: center;
     background-attachment: fixed;
