@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Галерея</title>
+    <link rel="stylesheet" href="css/style.css">
     <style>
         .gallery-container {
             display: flex;
@@ -16,17 +16,12 @@
 
         .gallery-item {
             width: 300px;
-            height: 300px;
-            overflow: hidden;
-            border: 5px solid lime;
-            position: relative;
         }
 
         .gallery-item img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
+            height: auto;
+            transition: transform 0.3s ease;
         }
 
         .gallery-item img:hover {
@@ -46,26 +41,23 @@
 
     <!-- Główna zawartość -->
     <div class="container">
-        <div class="main">
-            <h1>Gallery</h1>
-            <div class="gallery-container">
-             
-                <div class="gallery-item">
-                    <img src="img/lain.jpg" >
-                </div>
-                <div class="gallery-item">
-                    <img src="" ">
-                </div>
-                <div class="gallery-item">
-                    <img src="" >
-                </div
+        <div class="gallery-container">
+            <div class="gallery-item">
+                <img src="images/lain.jpg" alt="Serial Experiments Lain">
+            </div>
+            <div class="gallery-item">
+                <img src="images/angel.jpeg" alt="Angel's Egg">
+            </div>
+            <div class="gallery-item">
+                <img src="images/images.jpeg" alt="Ergo Proxy">
             </div>
         </div>
     </div>
+
     <!-- Stopka -->
     <footer class="footer">
-        <p>&copy; 2025 hypnosister. All rights reserved.</p>
-        <img src="gify/lain-iwakura.gif" alt="Blog" class="gif-link"></a>
+        <p>&copy; 2025 hypnosister. Все права защищены.</p>
+        <img src="images/lain-iwakura.gif" alt="Blog" class="gif-link">
     </footer>
 </body>
 </html>
