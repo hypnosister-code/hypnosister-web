@@ -5,8 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-BLEGHNZYGW"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-BLEGHNZYGW');
+    </script>
 </head>
 
 <body>
@@ -17,12 +23,8 @@
         <a href="index-ru.html"><img src="images/clickhere_blue.gif" alt="RU"></a>
     </div>
   
-
-    
-    
     <!-- Zegar -->
     <div class="clock" id="clock"></div>
-
     <script>
         function updateClock() {
             const clockElement = document.getElementById('clock');
@@ -52,12 +54,10 @@
     <img src="images/blinkiesCafe-x6.gif" alt="Blinkie 3" class="blinkie">
     <img src="https://blinkies.cafe/b/display/0206-nyancat.gif" alt="Blinkie 4" class="blinkie">
     <a href="https://www.buymeacoffee.com/cchelikopto" target="_blank">
-    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px; width: 150px; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); margin">
+    <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 40px; width: 150px; border-radius: 5px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); margin: 0;">
 </a>
 </div>
 </div>
- 
-
 
     <!-- Pasek przewijania -->
     <div class="marquee">
@@ -93,6 +93,24 @@
     <div class="visit-counter">
         Visitors: <span id="counter">0</span>
     </div>
+    <script>
+    // Pobierz liczbę aktywnych użytkowników z backendu
+    async function updateVisitorCounter() {
+      try {
+        const res = await fetch('/api/active-users');
+        if (res.ok) {
+          const data = await res.json();
+          document.getElementById('counter').textContent = data.activeUsers;
+        } else {
+          document.getElementById('counter').textContent = '?';
+        }
+      } catch (e) {
+        document.getElementById('counter').textContent = '?';
+      }
+    }
+    updateVisitorCounter();
+    setInterval(updateVisitorCounter, 30000); // odświeżaj co 30s
+    </script>
 
     <audio id="lain-bgm" src="audio/02.-Deeply.mp3" loop autoplay style="display:none"></audio>
     <script>
